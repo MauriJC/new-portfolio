@@ -5,6 +5,7 @@ module.exports = {
 
             colors: {
                 cream: 'rgba(245,238,230,0.5)',
+                neon: '#d6b618',
             },
             fontFamily: {
 
