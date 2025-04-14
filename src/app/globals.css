@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'tusker-semibold';
-  src: url('/fonts/TuskerGrotesk-1600Semibold.woff2') format('woff2');
+  src: url('/fonts/TuskerGrotesk-2600Semibold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,4 +48,56 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
+}
+
+/* styles/globals.css o tu archivo principal de Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-neon-glow {
+    color: #d6b618;
+    text-shadow:
+      0 0 5px #d6b618,
+      0 0 10px #d6b618,
+      0 0 20px #d6b618,
+      0 0 40px #d6b618;
+  }
+
+  .text-neon-glow-animated {
+    color: #d6b618;
+    animation: neon-glow 1.5s infinite alternate;
+    text-shadow:
+      0 0 5px #d6b618,
+      0 0 10px #d6b618,
+      0 0 20px #d6b618,
+      0 0 40px #d6b618;
+  }
+
+  @keyframes neon-glow {
+    0% {
+      text-shadow:
+        0 0 5px #d6b618,
+        0 0 10px #d6b618,
+        0 0 20px #d6b618,
+        0 0 40px #d6b618;
+    }
+
+    50% {
+      text-shadow:
+        0 0 10px #d6b618,
+        0 0 20px #d6b618,
+        0 0 30px #d6b618,
+        0 0 60px #d6b618;
+    }
+
+    100% {
+      text-shadow:
+        0 0 5px #d6b618,
+        0 0 10px #d6b618,
+        0 0 20px #d6b618,
+        0 0 40px #d6b618;
+    }
+  }
 }
