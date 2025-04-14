@@ -1,7 +1,8 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
+import Backgrounds from './backgrounds';
 
 const Hero = () => {
     const containerRef = useRef(null);
@@ -11,45 +12,76 @@ const Hero = () => {
         offset: ["start start", "end start"]
     });
 
-    // Interpolamos la opacidad entre los dos fondos
-    const opacityBg1 = useTransform(scrollYProgress, [0, 0.15], [1, 0.6]);
-    const opacityBg2 = useTransform(scrollYProgress, [0.15, 0.3], [0.4, 1]);
-
     return (
         <div ref={containerRef} className="relative h-[300vh] overflow-hidden">
-            {/* Fondo 1 */}
-            <motion.img
-                src="/images/background.png"
-                alt="fondo 1"
-                className="fixed top-0 left-0 w-full h-full object-cover z-0"
-                style={{ opacity: opacityBg1 }}
-            />
-
-            {/* Fondo 2 */}
-            <motion.img
-                src="/images/black.jpg"
-                alt="fondo 2"
-                className="fixed top-0 left-0 w-full h-full object-cover z-0"
-                style={{ opacity: opacityBg2 }}
-            />
-
+            <Backgrounds scrollYProgress={scrollYProgress} />
             {/* Contenido */}
-            <section className="relative h-screen flex items-center justify-center z-10">
-                <motion.h1
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true }}
-                    className="text-white text-6xl font-bold text-center"
-                >
-                    ¡Bienvenido a mi portafolio!
-                </motion.h1>
+            <section className="relative h-screen z-10 lg:flex flex-row items-center" id="about">
+                <div className="w-[50%] flex flex-col justify-end h-screen">
+
+                    <motion.h1
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        whileHover={{ translateX: 50 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        className="text-[20rem] lg:text-[25vh] font-[tusker-semibold] mb-[-10vh]"
+                    >
+                        FULLSTACK
+                    </motion.h1>
+
+                    <motion.h1
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        whileHover={{ translateX: 50 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        className="text-[20rem] lg:text-[25vh] font-[tusker-semibold] mb-0"
+                    >
+                        DEVELOPER
+                    </motion.h1>
+                </div>
+
+                <div className="w-[50%] h-screen flex flex-col justify-center mr-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ amount: 0 }}
+                        className="text-3xl font-[neue-medium] mt-[40%] text-right"
+                    >
+                        <p>I AM A FULLSTACK DEVELOPER</p>
+                        <p> BASED IN ARGENTINA. I AM STARTING</p>
+                        <p>MY JOURNEY AS SOFTWARE ENGINEER</p>
+                        <p>I LOVE EFFICIENT AND ROBUST</p>
+                        <p> SOFTWARE DESIGN. I LOVE PLAYING,</p>
+                        <p>PIZZA AND PROGRAMMING.</p>
+                        <br></br>
+                        <a href='#contact' className="text-neon-glow-animated text-4xl">CONTACT ME!</a>
+                    </motion.div>
+
+                    {/*                     <motion.div
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 1, ease: 'easeInOut' }}
+                        viewport={{ amount: 0.4, once: true }}
+                        className="text-white text-3xl"
+                    >
+                        ¡Hola! Soy una caja animada 😄
+                    </motion.div> */}
+                </div>
             </section>
 
-            <section className="relative h-screen flex items-center justify-center z-10">
+            <section className="relative h-screen flex items-center justify-center z-10" id="projects">
                 <h2 className="text-white text-5xl">Sección 2</h2>
             </section>
-        </div>
+
+            <section className="relative h-screen flex items-center justify-center z-10" id="contact">
+                <h2 className="text-white text-5xl">Sección 3</h2>
+            </section>
+        </div >
     );
 };
 
