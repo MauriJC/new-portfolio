@@ -20,13 +20,13 @@ const NavBar = () => {
                     onClick={() => { scrollToId('about', -80); setSelected('about') }}
                     className={`font-[tusker] ml-1 cursor-pointer  ${selected == 'about' ? 'line-through' : ''}`}
                 >
-                    about,
+                    about-
                 </a>
                 <a
                     onClick={() => { scrollToId('projects', -0); setSelected('projects') }}
                     className={`font-[tusker] ml-1 cursor-pointer  ${selected == 'projects' ? 'line-through' : ''}`}
                 >
-                    projects,
+                    projects-
                 </a>
                 <a
                     onClick={() => { scrollToId('contact', -0); setSelected('contact') }}
