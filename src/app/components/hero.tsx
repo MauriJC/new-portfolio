@@ -3,6 +3,9 @@
 import { motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import Backgrounds from './backgrounds';
+import { scrollToId } from '../utils/scrollToId';
+import ProjectsSection from './projectsSection';
+import ContactSection from './contactSection';
 
 const Hero = () => {
     const containerRef = useRef(null);
@@ -13,19 +16,20 @@ const Hero = () => {
     });
 
     return (
-        <div ref={containerRef} className="relative h-[300vh] overflow-hidden">
+        <div ref={containerRef} className="relative h-[300vh] w-full overflow-hidden">
             <Backgrounds scrollYProgress={scrollYProgress} />
             {/* Contenido */}
             <section className="relative h-screen z-10 lg:flex flex-row items-center" id="about">
-                <div className="w-[50%] flex flex-col justify-end h-screen">
-
+                <div className="h-[50%] w-[50%] flex flex-col justify-end h-screen">
                     <motion.h1
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         whileHover={{ translateX: 50 }}
                         transition={{ duration: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ amount: 0.3 }}
                         className="text-[20rem] lg:text-[25vh] font-[tusker-semibold] mb-[-10vh]"
+                        drag
+                        dragConstraints={containerRef}
                     >
                         FULLSTACK
                     </motion.h1>
@@ -35,32 +39,38 @@ const Hero = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         whileHover={{ translateX: 50 }}
                         transition={{ duration: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ amount: 0.3 }}
                         className="text-[20rem] lg:text-[25vh] font-[tusker-semibold] mb-0"
+                        drag
+                        dragConstraints={containerRef}
                     >
                         DEVELOPER
                     </motion.h1>
                 </div>
 
-                <div className="w-[50%] h-screen flex flex-col justify-center mr-6">
+                <div className="w-[50%] md:h-screen flex flex-col justify-center mr-6">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        viewport={{ amount: 0 }}
+                        viewport={{ amount: 0.3 }}
                         className="text-3xl font-[neue-medium] mt-[40%] text-right"
                     >
-                        <p>I AM A FULLSTACK DEVELOPER</p>
+                        <p>I AM MAURICIO, A FULLSTACK DEVELOPER</p>
                         <p> BASED IN ARGENTINA. I AM STARTING</p>
-                        <p>MY JOURNEY AS SOFTWARE ENGINEER</p>
+                        <p>MY JOURNEY AS SOFTWARE ENGINEER.</p>
                         <p>I LOVE EFFICIENT AND ROBUST</p>
                         <p> SOFTWARE DESIGN. I LOVE PLAYING,</p>
-                        <p>PIZZA AND PROGRAMMING.</p>
+                        <p>MILANESA AND PROGRAMMING.</p>
                         <br></br>
-                        <a href='#contact' className="text-neon-glow-animated text-4xl">CONTACT ME!</a>
+                        <a
+                            className="text-neon-glow-animated text-4xl cursor-pointer hover:scale-120"
+                            onClick={() => { scrollToId('contact', -0); }}>
+                            CONTACT ME!
+                        </a>
                     </motion.div>
 
-                    {/*                     <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         whileHover={{ scale: 1.05 }}
@@ -74,13 +84,10 @@ const Hero = () => {
                 </div>
             </section>
 
-            <section className="relative h-screen flex items-center justify-center z-10" id="projects">
-                <h2 className="text-white text-5xl">Sección 2</h2>
-            </section>
+            <ProjectsSection />
 
-            <section className="relative h-screen flex items-center justify-center z-10" id="contact">
-                <h2 className="text-white text-5xl">Sección 3</h2>
-            </section>
+            <ContactSection />
+
         </div >
     );
 };
