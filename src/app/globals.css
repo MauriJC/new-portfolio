@@ -101,3 +101,77 @@ html {
     }
   }
 }
+
+
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 4.8rem;
+  gap: 4.8rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 10s) linear infinite var(--direction, forwards);
+}
+
+.marquee-text p {
+  border: 1px solid white;
+  background-color: #141414;
+  border-radius: 999px;
+  padding: 1rem 2.5rem;
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+.marquee {
+  max-width: 100%;
+  overflow: hidden;
+  --speed: 25s;
+  --item-width: 10%;
+  --item-gap: 1rem;
+  --num-items: 5;
+
+  --single-slide-speed: calc(var(--speed) / var(--num-items));
+  --item-width-plus-gap: calc(var(--item-width) + var(--item-gap));
+  --track-width: calc(var(--item-width-plus-gap) * var(--num-items));
+}
+
+.marquee-track {
+  display: flex;
+  gap: var(--item-gap);
+  animation: marquee-move var(--speed) linear infinite;
+}
+
+.marquee-item {
+  width: var(--item-width);
+  aspect-ratio: 1/1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  flex-shrink: 0;
+  /* Evita que los ítems se reduzcan */
+}
+
+.marquee-item svg {
+  height: auto;
+  width: 60%;
+}
+
+@keyframes marquee-move {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
