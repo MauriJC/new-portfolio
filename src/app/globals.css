@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --foreground: #ededed;
@@ -32,8 +32,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -102,7 +100,6 @@ html {
   }
 }
 
-
 .marquee-text {
   overflow: clip;
 }
@@ -127,7 +124,6 @@ html {
     transform: translateX(-50%);
   }
 }
-
 
 .marquee {
   max-width: 100%;
