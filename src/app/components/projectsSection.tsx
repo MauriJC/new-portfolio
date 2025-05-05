@@ -116,7 +116,6 @@ const projects: Project[] = [
 ];
 
 const ProjectsSection = () => {
-  /* Que proyectos pongo: galenos, PCN, ASZ?, Telefonica => front + back + mobile, sistema del gimnasio?*/
   return (
     <section className="relative z-30 flex h-[150vh] w-full flex-wrap justify-around" id="projects">
       <div className="mt-20 w-full">
