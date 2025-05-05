@@ -5,7 +5,7 @@ const ExperienceSection = () => {
     <section id="experience" className="relative z-10 mx-auto h-screen max-w-5xl px-4 py-16">
       <h2 className="mb-10 text-center text-3xl font-bold">Work Experience</h2>
 
-      <div className="space-y-10">
+      <div className="space-y-5">
         {/* ASZ Software */}
         <motion.div
           className="cursor-pointer"
@@ -71,7 +71,7 @@ const ExperienceSection = () => {
         </motion.div>
 
         {/* GIMSA */}
-        <motion.div
+        {/* <motion.div
           className="cursor-pointer"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,6 +88,28 @@ const ExperienceSection = () => {
             Developed a custom CRM to manage gym memberships and subscriptions. It included
             registration, client tracking, and payment history. This was my first live production
             project.
+          </p>
+        </motion.div> */}
+
+        <motion.div
+          className="cursor-pointer"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ x: 10 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ amount: 0.3, once: true }}
+        >
+          <h3 className="text-xl font-semibold">Sovos</h3>
+          <p className="mb-2 text-sm text-gray-500">QA Engineer Intern · 2022</p>
+          <p className="mb-1">
+            <strong>Technologies:</strong> Cypress · Jira · Zephyr · Manual/Automated Testing ·
+            React
+          </p>
+          <p>
+            Contributed to software quality assurance by designing and executing both manual and
+            automated tests using Cypress. Created comprehensive test suites and documented test
+            cases in Jira with the Zephyr plugin. Collaborated closely with developers to ensure
+            front-end features built in React met functionality and reliability standards.
           </p>
         </motion.div>
       </div>
