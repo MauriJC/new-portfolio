@@ -36,7 +36,8 @@ const technologies: Technology[] = [
 
 const MarqueeWithLogos: React.FC = () => {
   return (
-    <div className="marquee">
+    <div className="marquee relative z-30 flex h-[50vh] flex-col items-center gap-4 md:text-xl">
+      <h2>Technologies I use</h2>
       <div
         className="marquee-track"
         style={{ '--num-items': technologies.length * 2 } as React.CSSProperties}
