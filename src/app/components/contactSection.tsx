@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { DownloadLogo, EmailLogo, LinkedInLogo } from './ui/logos';
+import { DownloadLogo, EmailLogo, GitHubLogo, LinkedInLogo } from './ui/logos';
 
 const ContactSection = () => {
   return (
@@ -32,7 +32,7 @@ const ContactSection = () => {
         </motion.p>
 
         <motion.div
-          className="flex flex-col items-center justify-center gap-6 sm:flex-row"
+          className="flex flex-col items-center justify-around gap-6 sm:flex-row"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
@@ -40,6 +40,7 @@ const ContactSection = () => {
           <a href="mailto:xaviermauricio33@gmail.com">
             <EmailLogo className="h-10 transition hover:scale-115" />
           </a>
+
           <Link
             href="/CV Chaile Mauricio Javier - Developer.pdf"
             className="flex flex-col items-center justify-center gap-2 rounded-lg px-6 py-3 font-bold transition hover:scale-105 hover:bg-[#ffffff4d]"
@@ -53,8 +54,18 @@ const ContactSection = () => {
             href="https://www.linkedin.com/in/mauriciojavierchaile"
             target="_blank"
             rel="noopener noreferrer"
+            className=""
           >
             <LinkedInLogo className="h-10 transition hover:scale-115"></LinkedInLogo>
+          </a>
+
+          <a
+            href="https://github.com/MauriJC"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=""
+          >
+            <GitHubLogo className="h-10 transition hover:scale-115"></GitHubLogo>
           </a>
         </motion.div>
       </div>
