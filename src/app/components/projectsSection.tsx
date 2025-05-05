@@ -17,7 +17,7 @@ const projects: Project[] = [
     id: 1,
     name: 'GalenOS',
     description:
-      'A system made to identify different pulmonar diseases through the analysis of toraxic radiographies using a convolutional neural network',
+      'A medical AI system that analyzes thoracic X-rays to detect pulmonary diseases using a convolutional neural network. Built with a Django backend and TensorFlow model for classification, integrated into a React-based interface.',
     shortDescription: '',
     technologies: ['React', 'Django', 'TensorFlow', 'PostgreSQL'],
     repoLink: 'https://github.com/MauriJC/galenos',
@@ -35,9 +35,9 @@ const projects: Project[] = [
     id: 2,
     name: 'Claims and installations management system',
     description:
-      'A CRM system developed to manage claims and installation requests for a telecommunications cooperative, utilizing technologies like React.js, Express, and PostgreSQL to streamline task management and improve operational efficiency.',
+      'A custom CRM for a telecommunications company to manage client claims and installation requests. Built with React.js (frontend), Expo (mobile frontend), Express (backend), and PostgreSQL, it improves task tracking and team coordination.',
     shortDescription: '',
-    technologies: ['Express', 'React', 'Expo', 'Material UI', 'PostgreSQL'],
+    technologies: ['React', 'Express', 'Expo (Mobile)', 'PostgreSQL', 'Material UI'],
     repoLink: 'https://github.com/MauriJC/frontend-reclamos-telefonica',
     videoUrl: '',
     imagesUrls: [
@@ -57,7 +57,16 @@ const projects: Project[] = [
     description:
       'Connect, learn, and grow with top software engineers. Share knowledge, exchange experiences, and build meaningful connections in the world of programming! This is the PCN(programa con nosotros) slogan. I worked as collaborator for this open source project.',
     shortDescription: '',
-    technologies: ['Next', 'TailwindCSS', 'PosrgreSQL', 'Shadcn UI'],
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'TailwindCSS',
+      'PostgreSQL',
+      'Shadcn UI',
+      'Prisma',
+      'zod',
+      'Docker',
+    ],
     repoLink: 'https://github.com/MauriJC/pcn-website/tree/main',
     videoUrl: '',
     imagesUrls: [
@@ -69,9 +78,10 @@ const projects: Project[] = [
   {
     id: 4,
     name: 'Gym Clients management system ',
-    description: 'A client CRM made for a local gym to manage their clients subscriptions.',
+    description:
+      'A lightweight CRM built for a local gym to manage client data and subscription statuses. Developed with Django and SQLite, featuring a simple UI with HTML/CSS and JavaScript.',
     shortDescription: '',
-    technologies: ['Django', 'HTML', 'CSS', 'Javascript'],
+    technologies: ['Django', 'Javascript', 'SQLite', 'API Rest'],
     repoLink: 'https://github.com/MauriJC/gimsa',
     videoUrl: '',
     imagesUrls: [
@@ -83,30 +93,32 @@ const projects: Project[] = [
   },
   {
     id: 5,
+    name: 'ASZ-Software home page',
+    description:
+      'A marketing site for ASZ-Software with integrated user authentication and article bookmarking. Built using Next.js and PostgreSQL, styled with Tailwind and ShadCN UI.',
+    shortDescription: '',
+    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Tailwind', 'Shadcn', 'zod', 'Prisma'],
+    repoLink: 'https://www.asz-studio.com/',
+    videoUrl: '',
+    imagesUrls: ['/images/projects/asz/asz.webp'],
+  },
+  {
+    id: 6,
     name: 'What the food?',
-    description: '',
+    description:
+      'A recipe-sharing and food discovery platform. Built with a Nest.js backend and React frontend styled with Tailwind and ShadCN UI. Includes user auth, recipe browsing, and bookmarking.',
     shortDescription: '',
     technologies: ['Nest', 'React', 'Tailwind', 'ShadCN'],
     repoLink: '',
     videoUrl: '',
     imagesUrls: ['/images/background.png'],
   },
-  {
-    id: 6,
-    name: 'ASZ-Software home page',
-    description: 'Landing page for ASZ-Software',
-    shortDescription: '',
-    technologies: ['Next.js', 'PostgreSQL', 'Tailwind', 'Shadcn'],
-    repoLink: 'https://www.asz-studio.com/',
-    videoUrl: '',
-    imagesUrls: ['/images/projects/asz/asz.webp'],
-  },
 ];
 
 const ProjectsSection = () => {
   /* Que proyectos pongo: galenos, PCN, ASZ?, Telefonica => front + back + mobile, sistema del gimnasio?*/
   return (
-    <section className="relative z-30 flex h-screen w-full flex-wrap justify-around" id="projects">
+    <section className="relative z-30 flex h-[150vh] w-full flex-wrap justify-around" id="projects">
       <div className="mt-20 w-full">
         <h2 className="text-center text-5xl text-white">Projects</h2>
       </div>
