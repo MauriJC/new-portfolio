@@ -117,11 +117,14 @@ const projects: Project[] = [
 
 const ProjectsSection = () => {
   return (
-    <section className="relative z-30 flex h-[150vh] w-full flex-wrap justify-around" id="projects">
-      <div className="mt-20 w-full">
-        <h2 className="text-center text-5xl text-white">Projects</h2>
+    <section className="relative z-30 flex h-[150vh] w-full flex-col" id="projects">
+      <div className="h-screen">
+        <h2 className="text-center text-[clamp(2rem,10vw,4rem)] text-white">Projects</h2>
+        <div className="flex flex-row justify-between gap-4">
+          <ProjectList projects={projects} />
+        </div>
       </div>
-      <ProjectList projects={projects} />
+
       <MarqueeWithLogos />
     </section>
   );

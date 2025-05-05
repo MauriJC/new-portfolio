@@ -49,7 +49,7 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
     return projectsList.map((project) => (
       <motion.li
         key={project.id}
-        className="cursor-pointer border-b p-4"
+        className="cursor-pointer border-b p-2"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         whileHover={{ x: 10 }}
@@ -64,11 +64,11 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <div className="mt-15 h-[100vh] w-[45%] pb-40 font-[neue-medium] text-4xl">
+      <div className="mt-15 h-[80vh] w-[45%] font-[neue-medium] md:text-4xl">
         <ul className="flex h-full flex-col justify-around">{renderProjects(firstHalf)}</ul>
       </div>
 
-      <div className="mt-15 h-[100vh] w-[45%] pb-40 font-[neue-medium] text-4xl">
+      <div className="mt-15 h-[80vh] w-[45%] font-[neue-medium] md:text-4xl">
         <ul className="flex h-full flex-col justify-around">{renderProjects(secondHalf)}</ul>
       </div>
 
