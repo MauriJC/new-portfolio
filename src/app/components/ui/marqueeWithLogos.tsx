@@ -9,6 +9,8 @@ import {
   PrismaLogo,
   DjangoLogo,
   GitLogo,
+  ExpressLogo,
+  NestLogo,
 } from './logos';
 
 interface Technology {
@@ -28,6 +30,8 @@ const technologies: Technology[] = [
   { name: 'Prisma', Logo: PrismaLogo },
   { name: 'Django', Logo: DjangoLogo },
   { name: 'Git', Logo: GitLogo },
+  { name: 'Express', Logo: ExpressLogo },
+  { name: 'Nest', Logo: NestLogo },
 ];
 
 const MarqueeWithLogos: React.FC = () => {
