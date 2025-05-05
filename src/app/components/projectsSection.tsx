@@ -102,7 +102,7 @@ const projects: Project[] = [
     videoUrl: '',
     imagesUrls: ['/images/projects/asz/asz.webp'],
   },
-  {
+  /*   {
     id: 6,
     name: 'What the food?',
     description:
@@ -112,7 +112,7 @@ const projects: Project[] = [
     repoLink: '',
     videoUrl: '',
     imagesUrls: ['/images/background.png'],
-  },
+  }, */
 ];
 
 const ProjectsSection = () => {
