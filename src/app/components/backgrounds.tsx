@@ -14,19 +14,19 @@ const Backgrounds = ({ scrollYProgress }: BackgroundsProps) => {
   return (
     <>
       <motion.img
-        src="/images/background.png"
+        src="/images/background2.webp"
         alt="fondo 1"
         className="fixed top-0 left-0 z-0 h-full w-full object-cover"
         style={{ opacity: opacityBg1 }}
       />
       <motion.img
-        src="/images/black.jpg"
+        src="/images/black.webp"
         alt="fondo 2"
         className="fixed top-0 left-0 z-0 h-full w-full object-cover"
         style={{ opacity: opacityBg2 }}
       />
       <motion.img
-        src="/images/background.png"
+        src="/images/bg4.webp"
         alt="fondo 3"
         className="fixed top-0 left-0 z-0 h-full w-full object-cover"
         style={{ opacity: opacityBg3 }}
