@@ -24,8 +24,8 @@ const NavBar = () => {
     >
       <div className="flex items-center justify-between">
         <div>
-          <a href="#" className="font-[underdog] text-xl">
-            Mauricio Chaile
+          <a href="#" className="font-[neue-medium] text-xl">
+            MAURICIO CHAILE
           </a>
           <span className="ml-4 hidden font-[neue-medium] sm:inline">FULLSTACK DEVELOPER</span>
         </div>
