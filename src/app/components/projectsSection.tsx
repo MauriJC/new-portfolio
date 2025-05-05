@@ -23,12 +23,12 @@ const projects: Project[] = [
     repoLink: 'https://github.com/MauriJC/galenos',
     videoUrl: '/images/projects/Video1.mp4',
     imagesUrls: [
-      '/images/projects/galenos/galenos4.webp',
+      '/images/projects/galenos/Galenos4.webp',
       '/images/projects/galenos/Galenos1.webp',
-      '/images/projects/galenos/galenos2.webp',
+      '/images/projects/galenos/Galenos2.webp',
       '/images/projects/galenos/Galenos3.webp',
       '/images/projects/galenos/Galenos5.webp',
-      '/images/projects/galenos/galenos6.webp',
+      '/images/projects/galenos/Galenos6.webp',
     ],
   },
   {
@@ -100,7 +100,7 @@ const projects: Project[] = [
     technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Tailwind', 'Shadcn', 'zod', 'Prisma'],
     repoLink: 'https://www.asz-studio.com/',
     videoUrl: '',
-    imagesUrls: ['/images/projects/asz/asz.webp'],
+    imagesUrls: ['/images/projects/asz/ASZ.webp'],
   },
   /*   {
     id: 6,
