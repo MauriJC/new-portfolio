@@ -48,7 +48,7 @@ const NavBar = () => {
           }}
           className={`ml-1 cursor-pointer font-[tusker] ${selected == 'experience' ? 'line-through' : ''}`}
         >
-          experience
+          experience-
         </a>
         <a
           onClick={() => {
