@@ -25,10 +25,12 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
   const [currentImage, setCurrentImage] = useState(0);
 
   const handleNext = () => {
+    if (!selectedProject) return;
     setCurrentImage((prev) => (prev === selectedProject.imagesUrls.length - 1 ? 0 : prev + 1));
   };
 
   const handlePrev = () => {
+    if (!selectedProject) return;
     setCurrentImage((prev) => (prev === 0 ? selectedProject.imagesUrls.length - 1 : prev - 1));
   };
 

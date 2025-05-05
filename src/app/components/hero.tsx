@@ -61,7 +61,7 @@ const Hero = () => {
             <p>MY JOURNEY AS A SOFTWARE ENGINEER.</p>
             <p>I LOVE EFFICIENT AND ROBUST</p>
             <p>SOFTWARE DESIGN. I ALSO LOVE</p>
-            <p>PLAYING, EATING MILANESA, AND CODING!</p>
+            <p>PLAYING, EATING MILANESA, AND CODING.</p>
 
             <br />
 
