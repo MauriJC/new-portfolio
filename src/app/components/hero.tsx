@@ -6,6 +6,7 @@ import Backgrounds from './backgrounds';
 import { scrollToId } from '../utils/scrollToId';
 import ProjectsSection from './projectsSection';
 import ContactSection from './contactSection';
+import ExperienceSection from './experienceSection';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -16,7 +17,7 @@ const Hero = () => {
   });
 
   return (
-    <div ref={containerRef} className="relative h-[300vh] w-full overflow-hidden">
+    <div ref={containerRef} className="relative h-[450vh] w-full overflow-hidden">
       <Backgrounds scrollYProgress={scrollYProgress} />
       {/* Contenido */}
       <section className="relative z-10 h-screen flex-row items-center lg:flex" id="about">
@@ -72,6 +73,8 @@ const Hero = () => {
       </section>
 
       <ProjectsSection />
+
+      <ExperienceSection />
 
       <ContactSection />
     </div>
