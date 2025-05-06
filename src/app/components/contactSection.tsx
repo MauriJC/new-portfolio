@@ -37,36 +37,46 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <a href="mailto:xaviermauricio33@gmail.com">
-            <EmailLogo className="h-10 transition hover:scale-115" />
-          </a>
+          <div className="flex flex-col items-center justify-center gap-2 rounded-lg px-6 py-3 font-bold transition hover:scale-105 hover:bg-[#ffffff4d]">
+            Email me
+            <a href="mailto:xaviermauricio33@gmail.com" aria-label="Send me an email">
+              <EmailLogo className="h-10 transition hover:scale-115" />
+            </a>
+          </div>
 
           <Link
             href="/CV Chaile Mauricio Javier - Developer.pdf"
             className="flex flex-col items-center justify-center gap-2 rounded-lg px-6 py-3 font-bold transition hover:scale-105 hover:bg-[#ffffff4d]"
             target="_blank"
+            aria-label="Download my CV"
           >
             Download CV
             <DownloadLogo className="h-10" />
           </Link>
 
-          <a
-            href="https://www.linkedin.com/in/mauriciojavierchaile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=""
-          >
-            <LinkedInLogo className="h-10 transition hover:scale-115"></LinkedInLogo>
-          </a>
+          <div className="flex flex-col items-center justify-center gap-2 rounded-lg px-6 py-3 font-bold transition hover:scale-105 hover:bg-[#ffffff4d]">
+            LinkedIn
+            <a
+              href="https://www.linkedin.com/in/mauriciojavierchaile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my LinkedIn profile"
+            >
+              <LinkedInLogo className="h-10 transition hover:scale-115"></LinkedInLogo>
+            </a>
+          </div>
 
-          <a
-            href="https://github.com/MauriJC"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=""
-          >
-            <GitHubLogo className="h-10 transition hover:scale-115"></GitHubLogo>
-          </a>
+          <div className="flex flex-col items-center justify-center gap-2 rounded-lg px-6 py-3 font-bold transition hover:scale-105 hover:bg-[#ffffff4d]">
+            GitHub
+            <a
+              href="https://github.com/MauriJC"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my GitHub profile"
+            >
+              <GitHubLogo className="h-10 transition hover:scale-115"></GitHubLogo>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
