@@ -100,7 +100,7 @@ const projects: Project[] = [
     technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Tailwind', 'Shadcn', 'zod', 'Prisma'],
     repoLink: 'https://www.asz-studio.com/',
     videoUrl: '',
-    imagesUrls: ['/images/projects/asz/ASZ.webp'],
+    imagesUrls: ['/images/projects/asz/ASZ.webp', '/images/projects/asz/ASZ2.webp'],
   },
   /*   {
     id: 6,
