@@ -85,7 +85,7 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
             onClick={handleClose}
           >
             <motion.div
-              className="w-full max-w-lg rounded-lg border border-[rgba(245,238,230,0.5)] p-6 shadow-lg backdrop-blur-sm"
+              className="w-full max-w-lg rounded-lg border border-[rgba(245,238,230,0.5)] bg-[rgba(0,0,0,0.1)] p-6 shadow-lg backdrop-blur-xl"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -129,17 +129,32 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
                   </span>
                 ))}
               </div>
-              <p>
-                Want to see the code? Check the repo here! =&gt;{' '}
-                <a
-                  href={selectedProject.repoLink}
-                  target="blank_"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  Repo here!
-                </a>
-              </p>
+
+              {selectedProject.id == 5 ? (
+                <p>
+                  Want to see the website?{' '}
+                  <a
+                    href={selectedProject.repoLink}
+                    target="blank_"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    Click here!
+                  </a>
+                </p>
+              ) : (
+                <p>
+                  Want to see the code? =&gt;
+                  <a
+                    href={selectedProject.repoLink}
+                    target="blank_"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    Repo here!
+                  </a>
+                </p>
+              )}
 
               <button
                 onClick={handleClose}
