@@ -40,7 +40,7 @@ const ExperienceSection = () => {
         ].map((exp, index) => (
           <motion.div
             key={index}
-            className="mt-4 cursor-pointer"
+            className="mt-4"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ x: 10 }}
